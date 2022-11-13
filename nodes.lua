@@ -19,23 +19,9 @@ local glass_list = {
 	{"light_blue",	"Light Blue",	"40A1D6",}
 }
 
-for i in ipairs(glass_list) do
-	local name = glass_list[i][1]
-	local description = glass_list[i][2]
-	local colour = glass_list[i][3]
 
-	minetest.register_node("abriglass:stained_glass_"..name, {
-		description = description.." Glass",
-		tiles = {"abriglass_plainglass.png^[colorize:#"..colour..":122"},
-		groups = {cracky = 3, oddly_breakable_by_hand = 3},
-		use_texture_alpha = "blend",
-		sunlight_propagates = true,
-		light_source = 4,
-		drawtype = "glasslike",
-		paramtype = "light",
-		sounds = default.node_sound_glass_defaults(),
-	})
-end
+
+
 
 
 -- boring glass because why not?

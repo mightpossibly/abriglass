@@ -35,37 +35,11 @@ for i in ipairs(plain_colors) do
 end
 
 
--- undecorated coloured glass recipes
-local dye_list = {
-	{"white",      "White"},
-	{"grey",       "Grey"},
-	{"dark_grey",  "Dark Grey"},
-	{"black",      "Black"},
-	{"violet",     "Violet"},
-	{"blue",       "Blue"},
-	{"cyan",       "Cyan"},
-	{"dark_green", "Dark Green"},
-	{"green",      "Green"},
-	{"yellow",     "Yellow"},
-	{"brown",      "Brown"},
-	{"orange",     "Orange"},
-	{"red",        "Red"},
-	{"magenta",    "Magenta"},
-	{"pink",       "Pink"},
-}
+-- Abriglass Clear Glass recipe
+local dyes = dye.dyes
 
-for i in ipairs(dye_list) do
-	local name = dye_list[i][1]
-	local dye = dye_list[i][2]
-
-	minetest.register_craft({
-		output = 'abriglass:stained_glass_'..name..' 6',
-		recipe = {
-			{'abriglass:clear_glass', '', 'abriglass:clear_glass' },
-			{'abriglass:clear_glass', 'dye:'..dye, 'abriglass:clear_glass' },
-			{'abriglass:clear_glass', '', 'abriglass:clear_glass' },
-		}
-	})
+for i = 1, #dyes do
+	local name, desc = unpack(dyes[i])
 
 	minetest.register_craft({
 		type = "cooking",
@@ -219,4 +193,3 @@ minetest.register_craft({
 		{'default:clay_lump', 'default:clay_lump', 'default:clay_lump'},
 	}
 })
-
