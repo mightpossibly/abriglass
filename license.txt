@@ -1,4 +1,8 @@
+IMPORTANT NOTICE: This is a fork by mightpossibly of the mod 'abriglass'. It is an altered version of the original code. The original authors have no affiliation with this repository, nor do they endorse it or its contents in any way.
 
+The original license must apply to this fork as well:
+
+----------
 Textures:
 CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
 Attribution: Shara RedCat
